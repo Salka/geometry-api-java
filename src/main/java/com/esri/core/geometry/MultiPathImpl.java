@@ -27,7 +27,7 @@ package com.esri.core.geometry;
 
 import java.util.ArrayList;
 
-final class MultiPathImpl extends MultiVertexGeometryImpl {
+public class MultiPathImpl extends MultiVertexGeometryImpl {
 
 	protected boolean m_bPolygon;
 	protected Point m_moveToPoint;
@@ -1468,7 +1468,7 @@ final class MultiPathImpl extends MultiVertexGeometryImpl {
 		return Boundary.calculate(this, null);
 	}
 
-	// TODO: Add code fore interpolation type (none and angular)
+	// TODO: Add code for interpolation type (none and angular)
 	void interpolateAttributes(int from_path_index, int from_point_index,
 			int to_path_index, int to_point_index) {
 		for (int ipath = from_path_index; ipath < to_path_index - 1; ipath++) {
@@ -1505,7 +1505,7 @@ final class MultiPathImpl extends MultiVertexGeometryImpl {
 	}
 
 	// TODO: Add code for interpolation type (none and angular)
-	void interpolateAttributesForSemantics(int semantics, int from_path_index,
+	public void interpolateAttributesForSemantics(int semantics, int from_path_index,
 			int from_point_index, int to_path_index, int to_point_index) {
 		if (semantics == VertexDescription.Semantics.POSITION)
 			return;
@@ -1594,7 +1594,7 @@ final class MultiPathImpl extends MultiVertexGeometryImpl {
 					to_point_index, sub_length, ordinate);
 	}
 
-	// TODO: Add code fore interpolation type (none and angular)
+	// TODO: Add code for interpolation type (none and angular)
 	void interpolateAttributes_(int semantics, int from_path_index,
 			int from_point_index, int to_path_index, int to_point_index,
 			double sub_length, int ordinate) {

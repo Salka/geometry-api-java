@@ -33,6 +33,10 @@ public abstract class MultiPath extends MultiVertexGeometry implements
 		Serializable {
 	MultiPathImpl m_impl;
 
+	public MultiPathImpl getMultiPathImpl() {
+		return m_impl;
+	}
+
 	@Override
 	public VertexDescription getDescription() {
 		return m_impl.getDescription();
